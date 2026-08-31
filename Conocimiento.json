@@ -1,0 +1,43 @@
+{
+  "intenciones": [
+    {
+      "tag": "saludo",
+      "keywords": ["hola", "buenas", "que tal", "saludos", "holaa"],
+      "responses": [
+        "¡Hola! ¿En qué te puedo ayudar hoy?",
+        "¡Buenas! Qué gusto verte por aquí. ¿De qué te gustaría hablar?",
+        "Hola, soy tu asistente IA local,Maeli.¿Qué puedo hacer por ti?"
+      ]
+    },
+    {
+      "tag": "identidad",
+      "keywords": ["quien eres", "tu nombre", "que eres"],
+      "responses": [
+        "Soy una Inteligencia Artificial basada en JavaScript y JSON.",
+        "Me llamo Maeli y funciono completamente en tu navegador."
+      ]
+    },
+    {
+      "tag": "despedida",
+      "keywords": ["adios", "chao", "hasta luego", "bye"],
+      "responses": [
+        "¡Hasta luego! Que tengas un excelente día.",
+        "Nos vemos pronto. ¡No dudes en regresar si tienes más preguntas!"
+      ]
+    },
+    {
+      "tag": "estado",
+      "keywords": ["como estas", "como te va", "todo bien"],
+      "responses": [
+        "¡Estoy funcionando al 100%! Gracias por preguntar.",
+        "Como soy un programa, no tengo sentimientos, ¡pero mi código corre de maravilla!"
+      ]
+    }
+  ],
+  "default": [
+    "Lo siento, no entiendo bien lo que me dices. ¿Podrías intentar explicarlo de otra forma?",
+    "No tengo esa información en mi archivo JSON. Prueba preguntándome otra cosa.",
+    "Aún estoy aprendiendo. Intenta usar palabras como 'hola', 'quién eres' o 'cómo estás'."
+  ]
+}
+
