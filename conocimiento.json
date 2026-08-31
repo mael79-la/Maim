@@ -40,4 +40,20 @@
     "Aún estoy aprendiendo. Intenta usar palabras como 'hola', 'quién eres' o 'cómo estás'."
   ]
 }
+{
+  "name": "Maim Inteligencia Artificial",
+  "short_name": "Maim IA",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1e1e2e",
+  "theme_color": "#313244",
+  "icons": [
+    {
+      "src": "./logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
 
