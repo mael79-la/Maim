@@ -73,3 +73,26 @@ userInput.addEventListener('keypress', (e) => {
 
 // Arrancar la aplicación
 cargarIA();
+// REEMPLAZA ESTA FUNCIÓN EN TU SCRIPT.JS
+async function cargarIA() {
+    try {
+        // Usamos ./ para asegurar que busque en la raíz del hosting de GitHub
+        const respuesta = await fetch('./conocimiento.json');
+        
+        if (!respuesta.ok) {
+            throw new Error(`Error en el servidor: ${respuesta.status}`);
+        }
+        
+        baseConocimiento = await respuesta.json();
+        console.log("IA Lista y cargada correctamente.");
+    } catch (error) {
+        console.error("Error cargando el archivo JSON de la IA:", error);
+        // Respuesta de emergencia si el JSON falla en cargar en la nube
+        baseConocimiento = {
+            "intenciones": [
+                { "tag": "saludo", "keywords": ["hola"], "responses": ["¡Hola! El archivo JSON falló, pero sigo vivo aquí."] }
+            ],
+            "default": ["Conexión establecida, pero sigo cargando los datos de la base de conocimientos."]
+        };
+    }
+}
