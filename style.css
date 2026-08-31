@@ -10,13 +10,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 10px;
 }
 
+/* Contenedor principal adaptado a pantallas móviles */
 .chat-container {
     width: 100%;
     max-width: 450px;
-    height: 600px;
+    height: 85vh; /* Usa el alto de la pantalla del celular sin desbordarse */
     background-color: #252538;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.3);
@@ -25,14 +27,36 @@ body {
     overflow: hidden;
 }
 
+/* Cabecera corregida para alinear el logo y el texto horizontalmente */
 .chat-header {
     background-color: #313244;
     color: #cdd6f4;
     padding: 15px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    gap: 12px; /* Espacio horizontal fijo entre logo y título */
     border-bottom: 1px solid #45475a;
 }
 
+.chat-header h2 {
+    font-size: 18px;
+    white-space: nowrap; /* Evita que el título se rompa en varias líneas */
+}
+
+/* Control estricto del tamaño del logo para que no deforme el diseño */
+.header-logo {
+    width: 40px;
+    height: 40px;
+    min-width: 40px; /* Evita que el navegador lo encoja */
+    min-height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #a6e3a1;
+    background-color: #45475a; /* Color de fondo mientras carga la imagen */
+}
+
+/* Caja de mensajes */
 .chat-box {
     flex: 1;
     padding: 15px;
@@ -48,6 +72,7 @@ body {
     max-width: 80%;
     font-size: 14px;
     line-height: 1.4;
+    word-break: break-word; /* Evita que palabras largas rompan el diseño */
 }
 
 .user-message {
@@ -64,6 +89,7 @@ body {
     border-bottom-left-radius: 2px;
 }
 
+/* Área de entrada de texto */
 .chat-input-area {
     display: flex;
     padding: 15px;
@@ -79,6 +105,7 @@ body {
     background-color: #313244;
     color: #cdd6f4;
     outline: none;
+    font-size: 14px;
 }
 
 #sendBtn {
@@ -89,6 +116,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 14px;
     transition: background 0.2s;
 }
 
